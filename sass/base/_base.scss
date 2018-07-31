@@ -1,0 +1,62 @@
+/*
+1. set the margin and padding of the browser to 0, and this will be inherited
+by all the elements + sudo elements (::after & ::before).
+2. set BOX-SIZING to "border-box" and use it on the body +
+inheritance on the universal selector*
+3. set the root font to 10px*, so after that we can use the REM unit
+to help us to make resposive websites
+*/
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: inherit;
+}
+
+
+/*
+We should set the default font-size to %, so we still allow
+the user to choose his own font size
+10px = 10px / default font-size(16px)
+10px = 62.5%
+This defines what 1rem is.
+*/
+
+html {
+    font-size: 62.5%;
+
+    @include respond(big-desk){
+        font-size: 75%; //1rem = 12px, 12/16 = 75%;
+    }
+
+    @include respond(tab-land){
+        font-size: 56.25%; //1rem = 9px, 9/16 = 56.25%;
+    }
+
+    @include respond(tab-port){
+        font-size: 50%; //1rem = 8px, 8/16 = 50%;
+    }
+    
+}
+
+/*
+all the font definitions must be set on the body element, to be inherited by
+all the child elements
+*/
+
+body {
+    box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond(tab-port){
+        padding: 0;
+    }
+}
+
+::selection{
+    background-color: $color-primary;
+    color: $color-white;
+}

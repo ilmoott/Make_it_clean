@@ -1,0 +1,65 @@
+// BACKGROUND HEADER DEFINITIONS
+// linear-gradient = gradient change of color
+// to right = direction of the change. we can speficy more than one direction
+// background-position: top = the img will be fixed at the top || bottom || etc
+// clip-path = make original changes on the shape of the img
+
+.header {
+    height: 85vh;
+    background-image: linear-gradient(
+        to right,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)),
+        url(../../img/benefits.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+
+    @supports   (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)){
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        -moz-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        height: 95vh;            
+    }
+
+    @media screen and   (min-resolution: 192dpi) and (min-width:56.25em),
+                        (-webkit-min-devide-pixel-ratio:2) and (min-width:56.25em),
+                        (min-width:125em){
+        background-image: linear-gradient(
+        to right,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)),
+        url(../../img/hero.jpg);
+    }
+
+    @include respond(phone){
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    -moz-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    }
+
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+
+    &__logo {
+        height: 3.5rem;
+    }
+
+/*
+HOW TO CENTER AN ITEM:
+top & left: 50%
+*this is related to the parent element
+transform: translate(-50%,-50%);
+*/
+
+    &__text-box{
+        @include absCenter;
+    
+        text-align: center;
+    }
+
+}

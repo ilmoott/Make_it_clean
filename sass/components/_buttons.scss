@@ -1,0 +1,124 @@
+
+/*
+btn:link and btn:visited is to style the link to not be blue (before clicked)
+or purple (after clicked)
+*/
+
+.btn {
+    &,
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        font-size: 1.6rem;
+        transition: all .2s;
+        position: relative;
+        font-size: $default-font-size;
+
+        //Change for the <button> element
+        border: none;
+        cursor: pointer;
+    }
+    
+    
+    /*
+    btn:hover & btn:active use the transform to give an "pressing" effect
+    Note that the box-shadow property changes in the different states
+    */
+    &:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba($color-black,.2);
+
+        /*
+    When we hover the button, we will create some transfomations
+    to the ::AFTER sudo element.
+    */
+        &::after{
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+    
+    &:active,
+    &:focus{
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba($color-black,.2);
+    }
+    
+    &--white{
+        background-color: $color-white;
+        color: $color-grey-dark;
+
+        &::after{
+            background-color: $color-white;
+        }
+    }
+
+    &--green{
+        background-color: $color-primary;
+        color: $color-white;
+
+        &::after{
+            background-color: $color-primary;
+        }
+    }
+    
+    /*
+    ::after = sudo element linked to the .btn element.
+    CSS creates a sudo element right AFTER or BEFORE the .btn
+    This is used to create effects.
+    */
+    &::after{
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .6s;
+    }
+      
+    
+    
+    /*
+    Animation-fill-mode: backwards
+        set the style of the 0% of the animation before the animation start
+    */
+    &--animated{
+        animation: moveInBottom 1.4s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+
+}
+
+.btn-text{
+    &:link,
+    &:visited{
+        font-size: $default-font-size;
+        color:$color-primary;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary;
+        padding: 3px;
+        transition: all .2s;
+    }
+
+    &:hover{
+        background-color: $color-primary;
+        color: $color-white;
+        transform: translateY(-2px);
+        box-shadow: 0 1rem 2rem rgba($color-black, .15);
+    }
+
+    &:active{
+        transform: translateY(1px);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .15);
+    }
+}
