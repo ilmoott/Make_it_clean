@@ -202,7 +202,7 @@ body {
       .footer__logo-box {
         margin-bottom: 6rem; } }
   .footer__logo {
-    width: 15rem;
+    width: 5rem;
     height: auto; }
   .footer__navigation {
     border-top: 1px solid #777;
@@ -251,7 +251,7 @@ body {
 
 .header {
   height: 85vh;
-  background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../../img/hero.jpg);
+  background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
@@ -269,7 +269,7 @@ transform: translate(-50%,-50%);
       height: 95vh; } }
   @media screen and (min-resolution: 192dpi) and (min-width: 56.25em), (-webkit-min-devide-pixel-ratio: 2) and (min-width: 56.25em), (min-width: 125em) {
     .header {
-      background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../../img/hero.jpg); } }
+      background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg); } }
   @media screen and (max-width: 37.5em) {
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
@@ -280,7 +280,7 @@ transform: translate(-50%,-50%);
     top: 4rem;
     left: 4rem; }
   .header__logo {
-    height: 3.5rem; }
+    height: 5rem; }
   .header__text-box {
     position: absolute;
     top: 50%;
@@ -664,7 +664,7 @@ or purple (after clicked)
   fill: green;
   height: 5rem;
   width: 5rem;
-  background: url(../../img/001-tree.svg); }
+  background: url(../img/001-tree.svg); }
 
 .icon-clean {
   display: block;
@@ -672,7 +672,7 @@ or purple (after clicked)
   fill: green;
   height: 5rem;
   width: 5rem;
-  background: url(../../img/002-clean.svg); }
+  background: url(../img/002-clean.svg); }
 
 .icon-pet {
   display: block;
@@ -680,7 +680,7 @@ or purple (after clicked)
   fill: green;
   height: 5rem;
   width: 5rem;
-  background: url(../../img/003-dog.svg); }
+  background: url(../img/003-dog.svg); }
 
 .icon-secure {
   display: block;
@@ -688,7 +688,7 @@ or purple (after clicked)
   fill: green;
   height: 5rem;
   width: 5rem;
-  background: url(../../img/004-guard.svg); }
+  background: url(../img/004-guard.svg); }
 
 .card {
   perspective: 150rem;
@@ -733,20 +733,20 @@ or purple (after clicked)
     border-top-left-radius: 3px;
     border-top-right-radius: 3px; }
     .card__picture--1 {
-      background-image: url(../../img/vacuum.png), linear-gradient(to right bottom, #ffb900, #ff7730); }
+      background-image: url(../img/vacuum.png), linear-gradient(to right bottom, #ffb900, #ff7730); }
       @media screen and (min-width: 40em) {
         .card__picture--1 {
-          background-image: url(../../img/vacuum.png), linear-gradient(to right bottom, #ffb900, #ff7730); } }
+          background-image: url(../img/vacuum.png), linear-gradient(to right bottom, #ffb900, #ff7730); } }
     .card__picture--2 {
-      background-image: url(../../img/blind.jpg), linear-gradient(to right bottom, #7ed56f, #28b485); }
+      background-image: url(../img/blind.jpg), linear-gradient(to right bottom, #7ed56f, #28b485); }
       @media screen and (min-width: 40em) {
         .card__picture--2 {
-          background-image: url(../../img/blind.jpg), linear-gradient(to right bottom, #7ed56f, #28b485); } }
+          background-image: url(../img/blind.jpg), linear-gradient(to right bottom, #7ed56f, #28b485); } }
     .card__picture--3 {
-      background-image: url(../../img/oven.png), linear-gradient(to right bottom, #2998ff, #5643fa); }
+      background-image: url(../img/oven.png), linear-gradient(to right bottom, #2998ff, #5643fa); }
       @media screen and (min-width: 40em) {
         .card__picture--3 {
-          background-image: url(../../img/oven.png), linear-gradient(to right bottom, #2998ff, #5643fa); } }
+          background-image: url(../img/oven.png), linear-gradient(to right bottom, #2998ff, #5643fa); } }
   .card__heading {
     font-size: 2.8rem;
     font-weight: 300;
@@ -848,18 +848,17 @@ or purple (after clicked)
     width: 15rem;
     height: 15rem;
     float: left;
-    transform: translateX(-3rem) skew(12deg);
+    transform: translateX(-3rem) skewX(12deg);
     position: relative;
-    text-align: center;
-    backface-visibility: hidden;
     overflow: hidden;
     border-radius: 50%; }
     @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
       .story__shape {
         -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle(45% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
         -webkit-shape-outside: circle(50% at 50% 50%);
-        shape-outside: circle(50% at 50% 50%); } }
+        shape-outside: circle(50% at 50% 50%);
+        border-radius: none; } }
     @media screen and (max-width: 56.25em) {
       .story__shape {
         transform: skewX(0); } }
