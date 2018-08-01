@@ -7,6 +7,15 @@
 	 	path{
 			fill:#4fd171;
 		}
+
+		polygon{
+			fill:#4fd171;
+		}
+
+		rect{
+			fill:#4fd171;
+		}
+
 	 </style>
 <g>
 	<g>

@@ -27,7 +27,8 @@
         padding-top: 2rem;
         display: inline-block;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
 
         @include respond(tab-port){
             width: 100%;
@@ -37,14 +38,24 @@
 
     &__list{
         list-style: none;
+        display: flex;
+        padding: 2rem 0;
     }
 
     &__item{
         display: inline-block;
+        flex-basis: 50%;
+        display: flex;
+        flex-wrap: wrap;
         
         &:not(:last-child){
             margin-right: 1.5rem; 
         }
+    }
+
+    &__company{
+        display: flex;
+        padding-bottom: 2rem;
     }
 
     &__link{
@@ -86,3 +97,7 @@
             }
     }
 }}
+
+#company{
+    margin-bottom: 3rem;
+}
