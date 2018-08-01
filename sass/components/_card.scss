@@ -76,7 +76,7 @@
         }
 
         &--2{
-            background-image: url(../img/blind.jpg), linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+            background-image: url(../img/blind-small.jpg), linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
 
             @media screen and (min-width: 40em){
                 background-image: url(../img/blind.jpg), linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
