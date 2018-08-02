@@ -44,7 +44,10 @@
         }
 
         @include respond(tab-port){
+            width: 10rem;
+            height: 10rem;
             transform: skewX(0);
+            margin: 0 1rem 1rem 0;
         }
     }
     

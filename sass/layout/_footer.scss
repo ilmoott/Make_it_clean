@@ -88,7 +88,8 @@
         border-top: 1px solid $color-grey-dark;
         padding-top: 2rem;
         width: 80%;
-        float: right;
+        text-align: center;
+        margin: 0 auto;
 
         @include respond(tab-port){
             width: 100%;
@@ -100,4 +101,10 @@
 
 #company{
     margin-bottom: 3rem;
+}
+
+#copyright{
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }

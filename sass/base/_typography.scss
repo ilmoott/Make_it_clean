@@ -90,3 +90,11 @@ body {
         margin-bottom: 3rem;
     }
 }
+
+
+.hover-green{
+
+    &:hover{
+        color: #55c57a;
+    }
+}
