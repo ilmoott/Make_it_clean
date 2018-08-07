@@ -66,7 +66,7 @@
                     rgba($color-white,.9) 0%,
                     rgba($color-white,.9) 50%,
                     transparent 50%),
-                    url(../img/book.jpg);
+                    url(../img/book-min.jpg);
     background-size: cover;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
@@ -77,21 +77,21 @@
                     rgba($color-white,.9) 0%,
                     rgba($color-white,.9) 65%,
                     transparent 65%),
-                    url(../img/book.jpg);
+                    url(../img/book-min.jpg);
     }
 
     @include respond(tab-port){
         background-image: linear-gradient(to right,
                     rgba($color-white,.9) 0%,
                     rgba($color-white,.9) 100%),
-                    url(../img/book-small.jpg)
+                    url(../img/book-small-min.jpg)
     }
 
     @include respond(phone){
         background-image: linear-gradient(to right,
                     rgba($color-white,.9) 0%,
                     rgba($color-white,.9) 100%),
-                    url(../img/book-small.jpg)
+                    url(../img/book-small-min.jpg)
     }
 
     &__form{

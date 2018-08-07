@@ -68,26 +68,26 @@
         
 
         &--1{
-            background-image: url(../img/vacuum.png), linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+            background-image: url(../img/vacuum-min.png), linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
 
             @media screen and (min-width: 40em){
-                background-image: url(../img/vacuum.png), linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+                background-image: url(../img/vacuum-min.png), linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
             }
         }
 
         &--2{
-            background-image: url(../img/blind-small.jpg), linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+            background-image: url(../img/blind-small-min.jpg), linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
 
             @media screen and (min-width: 40em){
-                background-image: url(../img/blind.jpg), linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+                background-image: url(../img/blind-min.jpg), linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
             }
         }
 
         &--3{
-            background-image: url(../img/oven.png), linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+            background-image: url(../img/oven-min.png), linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
 
             @media screen and (min-width: 40em){
-                background-image: url(../img/oven.png), linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+                background-image: url(../img/oven-min.png), linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
             }
         }
     }
