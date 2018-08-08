@@ -10,6 +10,17 @@
         <!-- <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"> -->
 
         <!-- <link rel="stylesheet" href="css/icon-font.css"> -->
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123582465-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-123582465-1');
+        </script>
+
         <link rel="stylesheet" href="css/style.css">
         <link rel="shortcut icon" type="image/png" href="img/logo-min.png">
         
@@ -290,7 +301,7 @@
                 <div class="row">
                     <div class="book">
                         <div class="book__form">
-                            <form action="#" class="form">
+                            <form action="/action_page.php" class="form" target="_self" method="POST">
                                 <div class="u-margin-bottom-medium">
                                     <h2 class="heading-secondary">
                                         Start booking now
@@ -306,7 +317,7 @@
                                     <label for="email" class="form__label">Email address</label>
                                 </div>
                                 <div class="form__group">
-                                    <textarea id="text" class="form__input" placeholder="Write something.."></textarea>
+                                    <input type="text" id="text" class="form__input" placeholder="Write something..">
                                 </div>
 
                                 <div class="form__group u-margin-bottom-medium">
@@ -330,7 +341,7 @@
                                 </div>
 
                                 <div class="form__group">
-                                    <button class="btn btn--green u-margin-bottom-medium">Next step &rarr;</button>
+                                    <input class="btn btn--green u-margin-bottom-medium" value="Next step &rarr;">
                                 </div>
 
                             </form>
