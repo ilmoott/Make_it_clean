@@ -23,6 +23,9 @@
     "postcss-cli": "^5.0.0"
   },
   "dependencies": {
-    "live-server": "^1.2.0"
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "live-server": "^1.2.0",
+    "mongoose": "^5.2.17"
   }
 }
