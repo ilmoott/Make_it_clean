@@ -1,22 +1,22 @@
-const express = require('express');
-const path = require('path');
-const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
+var express = require('express');
+var path = require('path');
+var mongoose = require('mongoose');
+var bodyParser = require('body-parser');
 
-const port = process.env.PORT || 3000;
-const app = express();
+var port = process.env.PORT || 3000;
+var app = express();
 
 mongoose.connect('mongodb://admin:admin123@ds113923.mlab.com:13923/node_todo_sample');
-const Schema = mongoose.Schema;
+var Schema = mongoose.Schema;
 
-let customerSchema = new Schema({
+var customerSchema = new Schema({
     name: String,
     email: String,
     description: String,
     type: String
 });
 
-let Customer = mongoose.model('Customer', customerSchema);
+var Customer = mongoose.model('Customer', customerSchema);
 
 app.use(bodyParser.urlencoded({extended: false}));
 
@@ -27,7 +27,7 @@ app.get('/', function(req, res){
 });
 
 app.post('/', function(req, res){
-    let customer;
+    var customer;
     if(req.body.email && req.body.name){
         customer = Customer({
             name: req.body.name,
