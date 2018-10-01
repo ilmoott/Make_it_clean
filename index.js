@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 var port = process.env.PORT || 80;
 var app = express();
 
-mongoose.connect('mongodb://admin:admin123@ds113923.mlab.com:13923/node_todo_sample');
+mongoose.connect('mongodb://admin:admin123@ds113923.mlab.com:13923/node_todo_sample', {useNewUrlParser:true});
 var Schema = mongoose.Schema;
 
 var customerSchema = new Schema({
