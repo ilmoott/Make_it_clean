@@ -3,7 +3,7 @@ var path = require('path');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 80;
 var app = express();
 
 mongoose.connect('mongodb://admin:admin123@ds113923.mlab.com:13923/node_todo_sample');
@@ -45,6 +45,4 @@ app.post('/', function(req, res){
     }
 });
 
-app.listen(port, function(){
-    console.log('Server started on the port 3000');
-});
+app.listen(port);
