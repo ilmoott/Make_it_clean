@@ -36,8 +36,7 @@ app.post('/', function(req, res){
         customer = Customer({
             name: req.body.name,
             email: req.body.email,
-            description: req.body.description,
-            type: req.body.type.id
+            description: req.body.description
         })
         .save(function(err){
            // if(err) throw err;
