@@ -3,7 +3,8 @@ const DOMStrings = {
     menu_link: ".navigation__link",
     popup_close: ".popup__close",
     popup_book: ".book_close",
-    popup: ".popup"
+    popup: ".popup",
+    navigation: ".navigation"
 };
 
 const menu = document.querySelector(DOMStrings.menu);
@@ -24,7 +25,19 @@ popup.addEventListener('click',function(e){
         popup.style.visibility = 'hidden';
         popup.style.opacity = 0;
     }
-})
+});
+
+
+//NAVIGATION BUTTON
+const navigation = document.querySelector(DOMStrings.navigation);
+
+navigation.addEventListener('click', function(){
+    if(navigation.style.display === "none"){
+        navigation.style.display = "block";
+    }else{
+        navigation.style.display = "none";
+    }
+});
 
 
 
