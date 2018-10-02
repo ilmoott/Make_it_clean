@@ -6,7 +6,11 @@ var bodyParser = require('body-parser');
 var port = process.env.PORT || 80;
 var app = express();
 
-mongoose.connect('mongodb://admin:admin123@ds113923.mlab.com:13923/node_todo_sample', {useNewUrlParser:true});
+mongoose.connect('mongodb://admin:admin123@ds113923.mlab.com:13923/node_todo_sample', {useNewUrlParser:true}, function(err) {
+    if (err) { console.log(err) }
+    
+});
+
 var Schema = mongoose.Schema;
 
 var customerSchema = new Schema({
@@ -45,4 +49,6 @@ app.post('/', function(req, res){
     }
 });
 
-app.listen(port);
+app.listen(port, function(){
+    console.log('Server started')
+});
