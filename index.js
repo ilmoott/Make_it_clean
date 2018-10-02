@@ -7,7 +7,7 @@ var port = process.env.PORT || 80;
 var app = express();
 
 mongoose.connect('mongodb://admin:admin123@ds113923.mlab.com:13923/node_todo_sample', {useNewUrlParser:true}, function(err) {
-    if (err) { console.log(err) }
+    if (err) { console.log(err); }
     
 });
 
