@@ -40,7 +40,7 @@ app.post('/', function(req, res){
             type: req.body.type.id
         })
         .save(function(err){
-            if(err) throw err;
+           // if(err) throw err;
 
             console.log('Customer Saved');
         });
@@ -50,5 +50,5 @@ app.post('/', function(req, res){
 });
 
 app.listen(port, function(){
-    console.log('Server started')
+    console.log('Server started');
 });
