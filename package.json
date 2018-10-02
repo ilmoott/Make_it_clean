@@ -12,7 +12,9 @@
     "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.concat.css -o css/style.prefix.css",
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
     "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css",
-    "nodemon" : "nodemon index.js"
+    "nodemon": "nodemon index.js",
+    "start-forever": "forever start index.js",
+    "stop-forever": "forever stop index.js"
   },
   "author": "Ilmo Ott",
   "license": "ISC",
@@ -26,6 +28,7 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
+    "forever-monitor": "^1.7.1",
     "live-server": "^1.2.0",
     "mongoose": "^5.2.17"
   }
