@@ -116,6 +116,7 @@ body {
       .heading-primary--main {
         letter-spacing: 1rem;
         font-size: 5rem; } }
+
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
@@ -269,6 +270,13 @@ body {
   text-align: center;
   display: flex;
   justify-content: center; }
+
+.main{
+  background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8));
+  background-size: cover;
+  height: 90vh;
+  padding: 10%;
+}
 
 .header {
   height: 85vh;
@@ -1101,3 +1109,8 @@ or purple (after clicked)
         right: 1.5rem; } }
   .popup__close:hover {
     color: #55c57a; }
+
+
+  .white{
+    color: white;
+  }

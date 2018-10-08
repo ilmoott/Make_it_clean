@@ -30,6 +30,10 @@ app.get('/', function(req, res){
     res.send(path.join(__dirname + '/public/index.html'));
 });
 
+app.get('/thankyou', function(req, res){
+    res.send(path.join(__dirname + '/public/thankyou.html'));
+});
+
 app.post('/', function(req, res){
     var customer;
     if(req.body.email && req.body.name){
@@ -43,8 +47,7 @@ app.post('/', function(req, res){
 
             console.log('Customer Saved');
         });
-
-        res.send('Thank you!');
+        res.redirect('/thankyou.html');
     }
 });
 
@@ -55,10 +58,7 @@ app.post('/', function(req, res){
 console.log("Calling app.listen().");
 
 var server = app.listen(port, function (){
-  console.log("Calling app.listen's callback function.");
   var host = server.address().address;
   var port = server.address().port;
-  console.log('Example app listening at http://%s:%s', host, port);
+  console.log('App listening at http://%s:%s', host, port);
 });
-
-console.log("app.listen() executed.");
