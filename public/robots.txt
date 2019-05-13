@@ -1,0 +1,4 @@
+User-agent: Googlebot
+Disallow:
+
+sitemap: http://www.makeitclean.com.au/sitemap.xml

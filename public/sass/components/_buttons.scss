@@ -22,8 +22,8 @@ or purple (after clicked)
         border: none;
         cursor: pointer;
     }
-    
-    
+
+
     /*
     btn:hover & btn:active use the transform to give an "pressing" effect
     Note that the box-shadow property changes in the different states
@@ -41,14 +41,14 @@ or purple (after clicked)
             opacity: 0;
         }
     }
-    
+
     &:active,
     &:focus{
         outline: none;
         transform: translateY(-1px);
         box-shadow: 0 5px 10px rgba($color-black,.2);
     }
-    
+
     &--white{
         background-color: $color-white;
         color: $color-grey-dark;
@@ -66,7 +66,7 @@ or purple (after clicked)
             background-color: $color-primary;
         }
     }
-    
+
     /*
     ::after = sudo element linked to the .btn element.
     CSS creates a sudo element right AFTER or BEFORE the .btn
@@ -84,9 +84,9 @@ or purple (after clicked)
         z-index: -1;
         transition: all .6s;
     }
-      
-    
-    
+
+
+
     /*
     Animation-fill-mode: backwards
         set the style of the 0% of the animation before the animation start

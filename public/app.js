@@ -16,11 +16,11 @@ menu_link.forEach(function(e){
     e.addEventListener('click',function(){
         menu.checked = false;
     });
-    // if(menu.checked === false){
-    //     menu_list.style.display = "none";
-    // }else{
-    //     menu_list.style.display = "block";
-    // }
+    if(menu.checked === false){
+        menu_list.style.display = "none";
+    }else{
+        menu_list.style.display = "block";
+    }
 });
 
 
@@ -46,7 +46,3 @@ popup.addEventListener('click',function(e){
 //     }
 // });
 
-
-
-
-console.log('test');

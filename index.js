@@ -6,6 +6,7 @@ var compression = require('compression');
 var nodemailer = require('nodemailer');
 
 
+
 var port = process.env.PORT || 5000;
 var app = express();
 
@@ -35,6 +36,14 @@ app.get('/', function(req, res){
     res.send(path.join(__dirname + '/public/index.html'));
 });
 
+app.get('/robots.txt', function(req, res){
+    res.send(path.join(__dirname + '/public/robots.txt'));
+});
+
+app.get('/quote', function(req, res){
+    res.send(path.join(__dirname + '/public/quotes/index.html'));
+});
+
 app.get('/thankyou', function(req, res){
     res.send(path.join(__dirname + '/public/thankyou.html'));
 });
@@ -54,17 +63,7 @@ app.post('/', function(req, res){
             console.log('Customer Saved');
 
         });
-        var output = `
-            <p>You have a new contact request:</p>
-            <br><br>
-            <h3>Contact Details</h3>
-            <br>
-            <ul>
-            <li>Name: ${req.body.name}</li>
-            <li>Email: ${req.body.email}</li>
-            </ul>
-            <p>Description: ${req.body.description}</p>
-            `;
+        var output = "<p>You have a new contact request:</p><br><br><h3>Contact Details</h3><br><ul><li>Name:" + req.body.name + "</li><li>Email: " + req.body.email + "</li></ul><p>Description:" + req.body.description + "</p>";
 
             var transporter = nodemailer.createTransport({
                 host: "smtp.gmail.com",
@@ -109,6 +108,8 @@ app.post('/', function(req, res){
 // });
 
 console.log("Calling app.listen().");
+
+
 
 var server = app.listen(port, function (){
   var host = server.address().address;

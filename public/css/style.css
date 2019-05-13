@@ -361,7 +361,7 @@ transform: translate(-50%,-50%);
 .navigation {
   text-align: center; }
   .navigation__checkbox {
-    display: none; }
+    display: block; }
   .navigation__button {
     background-color: #fff;
     height: 7rem;
@@ -406,7 +406,9 @@ transform: translate(-50%,-50%);
     left: 50%;
     transform: translate(-50%, -50%);
     list-style: none;
-    width: 100%; }
+    width: 100%;
+    z-index: -2000;
+  }
   .navigation__item {
     margin: 1rem; }
   .navigation__link:link, .navigation__link:visited {
